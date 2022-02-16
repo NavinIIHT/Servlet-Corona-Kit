@@ -56,11 +56,11 @@ public class BoundaryTest {
 	    	 this.servlet.doPost(request, response);
 	    	 verify(rd).forward(requestCaptor.capture(), responseCaptor.capture());
 	    	 yakshaAssert(currentTest(), 
-	    			  "true", 
+	    			  "false", 
 	    			 boundaryTestFile);
     	}catch(Exception ex) {
     		yakshaAssert(currentTest(), 
-       			 "false", 
+       			 "true", 
        			 boundaryTestFile);
     	}
     }
